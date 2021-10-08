@@ -13,15 +13,25 @@ void my_putchar(c)
 
 void star_top(int size)
 {
+    int a = 0;
     int star_size = size*3;
-    int space = 0;
+    int space = 1;
     printf("%i \n", star_size);
     for (int a = 0; a < size; a++) {
         for (int b = 0; b < star_size; b++) {
             my_putchar(' ');
         }
-        printf("*");
-        printf("\n");
+
+        my_putchar('*');
+        
+        if (a > 0) {
+            for (int c = 0; c < space; c++) {
+                my_putchar(' ');
+            }
+            my_putchar('*');
+            space += 2;
+        }
+        my_putchar('\n');
         star_size--;
     }
 }
