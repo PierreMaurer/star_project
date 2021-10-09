@@ -16,7 +16,6 @@ void star_top(int size)
     int a = 0;
     int star_size = size*3;
     int space = 1;
-    printf("%i \n", star_size);
     for (a; a < size; a++) {
         for (int b = 0; b < star_size; b++) {
             my_putchar(' ');
@@ -36,7 +35,27 @@ void star_top(int size)
     }
 }
 
+
+void line_star(int size) {
+    int star_size = size*3;
+    int line_width = (size*2)+1;
+    int space_width = ((size*6)-1) - line_width*2;
+    int count = 0;
+
+    for(count = count; count <= line_width; count++) {
+        my_putchar('*');
+    }
+    for (count = 0; count <= space_width-1; count ++) {
+        my_putchar(' ');
+    }
+    for(count = 0; count <= line_width; count++) {
+        my_putchar('*');
+    }
+    my_putchar('\n');
+
+}
 void main (unsigned int size)
 {
-    star_top(4);
+    star_top(3);
+    line_star(3);
 }
