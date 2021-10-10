@@ -17,14 +17,12 @@ void star_top(int size);
 void bot_star(int size);
 
 void mid_star(int size);
-            
-void mid_second_part(int size);
 
 void line_star(int size);
 
 void star (unsigned int size)
 {
-    if(size == 0) {
+    if (size == 0) {
         return;
     }
     star_top(size);

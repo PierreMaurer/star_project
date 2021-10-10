@@ -11,13 +11,13 @@ void line_star(int size) {
     int space_width = ((size*6)-1) - line_width*2;
     int count = 0;
 
-    for(count = count; count <= line_width; count++) {
+    for (count = count; count <= line_width; count++) {
         my_putchar('*');
     }
     for (count = 0; count <= space_width-1; count ++) {
         my_putchar(' ');
     }
-    for(count = 0; count <= line_width; count++) {
+    for (count = 0; count <= line_width; count++) {
         my_putchar('*');
     }
     my_putchar('\n');

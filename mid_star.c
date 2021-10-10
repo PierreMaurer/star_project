@@ -10,13 +10,13 @@ void mid_star(int size)
     int count = 0;
     int space = 1;
     int star_size = (size*6)-4;
+    
     for (count = count; count < size; count++) {
         for (int i = 0; i < space; i++) {
             my_putchar(' ');
         }
         my_putchar('*');
         space++;
-
         for (int j = 0; j <= star_size; j++) {
             my_putchar(' ');
         }
@@ -38,7 +38,6 @@ void mid_second_part(int size) {
             my_putchar(' ');
         }
         my_putchar('*');
-
         for(int j = 0; j <= star_size-size; j++){
             my_putchar(' ');
         }
