@@ -40,29 +40,28 @@ void bot_star(int size)
 {
     /* TODO: Finish bot_star */
     int a = 0;
-    int space = size;
-    int star_size = (size*2)+1;
+    int space = (size*2)-3;
+    int star_size = (size*2);
     
     for ( int line = 0; line < size; line++) {
-        for(a = a; a < star_size; a++) {
+        for(a = 0; a < star_size+1; a++) {
             my_putchar(' ');
         }
         my_putchar('*');
 
-        if (line < size-1) {
-            for (int c = 0; c <= space; c++) {
+        if (line <= (size*1)-2) {
+            //printf("line: %i \n", line);
+            for( int j = 0; j < space; j++) {
                 my_putchar(' ');
             }
             my_putchar('*');
-            if (line <= 1) {
-                space-= 2;
-            } else {
+            if (line >= size-2) {
                 space --;
-            }
+            } else
+            space -= 2;
         }
         my_putchar('\n');
         star_size++;
-        a = 0;
     }
         
 }
@@ -130,6 +129,11 @@ void line_star(int size) {
 
 void star (unsigned int size)
 {
+    if(size == 0) {
+        return;
+    } else if (size == 1) {
+        star_one();
+    }
     star_top(size);
     line_star(size);
     mid_star(size);
@@ -139,5 +143,9 @@ void star (unsigned int size)
 
 int main(void)
 {
-    star(5);
+    //   for(int i = 2; i <= 5; i++) {
+    //  star(i);
+    //}
+
+    star(0);
 }
