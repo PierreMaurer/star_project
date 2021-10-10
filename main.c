@@ -4,13 +4,6 @@
 ** File description:
 ** display a star based on given size
 */
-#include <stdio.h>
-#include <unistd.h>
-
-void my_putchar(c)
-{
-    write(1, &c, 1);
-}
 
 void star_top(int size);
 
@@ -33,11 +26,4 @@ void star (unsigned int size)
     mid_star(size);
     line_star(size);
     bot_star(size);
-}
-
-int main(void)
-{
-    for(int i = 0; i <= 5; i++) {
-        star(i);
-    }
 }
