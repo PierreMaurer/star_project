@@ -18,11 +18,14 @@ void bot_star(int size);
 
 void mid_star(int size);
 
-void line_star(int size);
+void star_one(void);
 
 void star (unsigned int size)
 {
-    if (size == 0) {
+    if (size == 1) {
+        star_one();
+        return;
+    } else if (size <= 0 || size > 2147483647) {
         return;
     }
     star_top(size);
@@ -34,7 +37,7 @@ void star (unsigned int size)
 
 int main(void)
 {
-    for(int i = 2; i <= 5; i++) {
+    for(int i = 0; i <= 5; i++) {
         star(i);
     }
 }

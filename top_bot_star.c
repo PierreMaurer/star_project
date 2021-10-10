@@ -12,9 +12,11 @@ void display_space(int space)
     }
 }
 
+void line_star(int size);
+
 void star_top(int size)
 {
-    int star_size = size*3;
+    int star_size = (size*3)-1;
     int space = 1;
     
     for (int a = 0; a < size; a++) {
@@ -38,7 +40,7 @@ void bot_star(int size)
     int star_size = (size*2);
     
     for (int line = 0; line < size; line++) {
-        for (int a = 0; a < star_size+1; a++) {
+        for (int a = 0; a < star_size; a++) {
             my_putchar(' ');
         }
         my_putchar('*');
