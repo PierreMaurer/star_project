@@ -5,7 +5,8 @@
 ** display a star
 */
 
-void line_star(int size) {
+void line_star(int size)
+{
     int star_size = size*3;
     int line_width = (size*2)+1;
     int space_width = ((size*6)-1) - line_width*2;
