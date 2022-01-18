@@ -5,6 +5,8 @@
 ** display a star based on given size
 */
 
+long my_getnbr(char const *str);
+
 void star_top(int size);
 
 void bot_star(int size);
@@ -26,4 +28,10 @@ void star (unsigned int size)
     mid_star(size);
     line_star(size);
     bot_star(size);
+}
+
+int main(int argc, char **argv)
+{
+    star(my_getnbr(argv[1]));
+    return 1;
 }
